@@ -509,8 +509,8 @@ getData <- function(input) {
       # }
       mydata = SpectronauttoMSstatsFormat(data,
                                           annotation = getAnnot(input),
-                                          filter_with_Qvalue = TRUE, ## same as default
-                                          qvalue_cutoff = 0.01, ## same as default
+                                          filter_with_Qvalue = input$q_val, 
+                                          qvalue_cutoff = input$q_cutoff,
                                           removeProtein_with1Feature = TRUE,
                                           use_log_file = FALSE)
     }
